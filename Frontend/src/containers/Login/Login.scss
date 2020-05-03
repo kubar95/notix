@@ -1,0 +1,78 @@
+@import '../../styles/abstracts/variables.scss'; 
+@import '../../styles/abstracts/mixins';
+
+.login-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-grey;
+    top: 0px;
+  }
+  .login {
+    box-sizing: content-box;
+    position: absolute;
+    background: $background-login-color;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    padding: 20px 0px;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: appear cubic-bezier(0.18, 0.89, 0.63, 1.22) 0.5s;
+    &__form{
+        padding: 5%;
+        box-sizing: border-box;
+        width: 100%;
+        &-btn{
+          margin-top: 10px !important;
+        }
+    }
+    &__logo {
+      background-image: url('../../assets/logo.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      text-align: center;
+      margin: 3% 0;
+      height: 100px;
+    }
+    &__change-view{
+      text-align: center;
+      &-btn{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
+
+
+  @keyframes appear {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  @include breakpoint-to ('s') {
+    .login{
+      width: 75%
+    }
+  }
+  @include breakpoint-to ('m') {
+    .login{
+      width: 50%
+    }
+  }
+  @include breakpoint-to ('xl') {
+    .login{
+      width: 25%;
+      &__logo {
+        height: 125px;
+      }
+    }
+  }

@@ -1,0 +1,56 @@
+@import '../../styles//abstracts/variables';
+@import '../../styles//abstracts/mixins';
+
+.notes {
+    margin: 50px auto;
+    width: 100%;
+    text-align: right;
+    .note {
+        &__header {
+            background-color: $light-grey;
+           
+        }
+        &__header-content {
+            display: flex;
+            padding: 5px 20px;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+        &__header-title {
+            font-weight: bold;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+        &__editor {
+            min-height: 350px;
+            &-wrapper {
+                width: 100% !important;
+    display: block !important;
+    margin-bottom: 25px !important;
+
+            }
+        }
+        
+    }
+}
+
+.MuiFormControl-marginNormal.MuiFormControl-marginNormal {
+    margin-top: 8px;
+}
+
+.DraftEditor-editorContainer, .DraftEditor-root, .public-DraftEditor-content {
+    height: unset !important;
+}
+@include breakpoint-to('m') {
+    .notes {
+        width: 90%;
+    }
+}
+
+@include breakpoint-to('l') {
+    .notes {
+        width: 80%;
+    }
+}

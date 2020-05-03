@@ -1,0 +1,42 @@
+@import '../../styles/abstracts/variables.scss';
+@import '../../styles/abstracts/mixins';
+.header{
+    &__right, 
+    &__left {
+        position: absolute;
+        padding: $header-padding;
+        z-index: $header-z-index;
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__right {
+        right: 10px;
+    }
+    &__left {
+        left: 10px;
+        text-decoration: none;
+    }
+    &__icon {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: $dark-grey;
+        &--light {
+            color: $light-grey;
+        }
+    }
+}
+
+@include breakpoint-to('l') {
+    .header {
+        &__right {
+            right: 40px;
+        }
+        &__left {
+            left: 40px;
+        }
+    }
+}
+
