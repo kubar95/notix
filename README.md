@@ -17,7 +17,7 @@ It is a web application that is designed to help organize student work. It allow
 * Project Lombok
 * Maven
 
-###Frontend
+### Frontend
 * React.js
 * React Router
 * Sass
@@ -38,11 +38,11 @@ java -jar notix/target/app-1.0-SNAPSHOT-exec.jar
 
 
 ## ToDo
-* Align buttons and inputs color
-* Cache subject and event data
-* Change stub events to real ones, made by user
-* Add event calendar
-* Add possibility to change user data
+- [x] Align buttons and inputs color
+- [x] Cache subject and event data
+- [x] Change stub events to real ones, made by user
+- [x] Add event calendar
+- [x] Add possibility to change user data
 
 ## Inspirations
 https://baas.amsterdam/
