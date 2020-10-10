@@ -25,6 +25,7 @@ It is a web application that is designed to help organize student work. It allow
 
 ## Setup
 ```bash
+cd ./Backend
 mvnw clean install
 java -jar notix/target/app-1.0-SNAPSHOT-exec.jar
 ```
